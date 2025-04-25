@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="page_title">تفاصيل العقار</title>
+  <!-- خط عربي -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap RTL -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <!-- ستايل الموقع العام -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- navbar مبسط مع زر عودة وزرّي اللغة -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <img src="images/logo.PNG" alt="شعار الموقع" class="yes-logo">
+      <a class="navbar-brand" href="index.html" data-i18n="brand">شركة القصور العالية</a>
+      <div class="ms-auto d-flex align-items-center">
+        <span id="btn-back" class="lang-btn me-3" onclick="history.back()" data-i18n="back_button">
+            عودة
+          </span>
+        <span id="btn-ar" class="lang-btn active">العربية</span>
+        <span id="btn-en" class="lang-btn">EN</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- معرض الصور -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-3 property-images">
+        <div class="col-md-4">
+          <img src="images/property1.jpg" class="img-fluid rounded" alt="عقار 1">
+        </div>
+        <div class="col-md-4">
+          <img src="images/property2.jpg" class="img-fluid rounded" alt="عقار 2">
+        </div>
+        <div class="col-md-4">
+          <img src="images/property3.jpg" class="img-fluid rounded" alt="عقار 3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- المواصفات -->
+  <section class="py-4">
+    <div class="container">
+      <h2 class="section-heading mb-3 text-center" data-i18n="specs_title">المواصفات</h2>
+      <ul class="list-group property-specs mx-auto" style="max-width:600px;">
+        <li class="list-group-item"><strong data-i18n="spec_bedrooms">عدد الغرف:</strong> 3</li>
+        <li class="list-group-item"><strong data-i18n="spec_bathrooms">عدد الحمامات:</strong> 3</li>
+            <li class="list-group-item">
+              <strong data-i18n="spec_bedrooms">عدد الغرف:</strong> 5
+            </li>
+            <li class="list-group-item">
+              <strong data-i18n="spec_bathrooms">عدد الحمامات:</strong> 3
+            </li>
+            <li class="list-group-item">
+              <strong data-i18n="spec_livingrooms">عدد غرف المعيشة:</strong>
+              <span data-i18n="answer_livingrooms">2</span>
+            </li>
+            <li class="list-group-item">
+              <strong data-i18n="spec_property">عمر العقار:</strong>
+              <span data-i18n="answer_new">جديد</span>
+            </li>
+            <li class="list-group-item">
+              <strong data-i18n="spec_units">الوحدات المتوفرة:</strong>
+              <span data-i18n="answer_units">2</span>
+            </li>
+            <li class="list-group-item">
+              <strong data-i18n="spec_name">اسم المشروع:</strong>
+              <span data-i18n="answer_project">ديم ريزدنس 11</span>
+            </li>
+            <li class="list-group-item">
+              <strong data-i18n="spec_area1">المنطقة:</strong>
+              <span data-i18n="answer_region_east">الشرقية</span>
+            </li>
+            <li class="list-group-item">
+              <strong data-i18n="spec_city">المدينة:</strong>
+              <span data-i18n="answer_city_khobar">الخبر</span>
+            </li>
+            <li class="list-group-item">
+              <strong data-i18n="spec_tn">الحي:</strong>
+              <span data-i18n="answer_district_hamra">الحمراء</span>
+            </li>
+            <li class="list-group-item">
+              <strong data-i18n="spec_company">اسم الشركة:</strong>
+              <span data-i18n="answer_company">شركة ال سعيدان للعقارات</span>
+            </li>
+            <li class="list-group-item">
+                <strong data-i18n="spec_payment">طريقة الدفع:</strong>
+                <span data-i18n="answer_pay">كاش ، تمويل</span>
+              </li>
+        <li class="list-group-item"><strong data-i18n="spec_area">المساحة:</strong> 162 م²</li>
+        <li class="list-group-item">
+            <strong data-i18n="spec_price">السعر:</strong>
+            699,000 
+            <img src="images/sar-icon.png" 
+                 alt="ر.س" 
+                 class="currency-icon">
+          </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- صندوق الحجز والاستفسار -->
+  <section class="py-5">
+    <div class="container">
+      <div class="contact-box mx-auto p-4 bg-light rounded shadow" style="max-width:400px;">
+        <p class="mb-2" data-i18n="booking_contact">للحجز والاستفسار تواصل مع</p>
+        <p><strong data-i18n="contact_email"></strong>
+          <a href="mailto:your-email@example.com">your-email@example.com</a>
+        </p>
+        <p><strong data-i18n="contact_phone"></strong>
+          <a href="tel:+9660571934424">+966 0571934424</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- التذييل (نفس footer) -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p data-i18n="footer_copy">© 2025 عقار القصور العالية. جميع الحقوق محفوظة.</p>
+      <p>
+        <a href="#" data-i18n="privacy">سياسة الخصوصية</a> |
+        <a href="#" data-i18n="terms">شروط الاستخدام</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- سكربتات Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ملف جافاسكربت الخارجي للترجمة والـ splash -->
+  <script src="script.js"></script>
+</body>
+</html>

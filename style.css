@@ -1,0 +1,179 @@
+/* شاشة البداية (Splash Screen) */
+#splash {
+  position: fixed;
+  inset: 0;                       /* top, right, bottom, left = 0 */
+  background: #003366;           /* لون خلفية ثابت */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;                 /* فوق كل شيء */
+  animation: splash-fade-out 1s ease-in-out 3s forwards;
+}
+
+/* الشعار داخل شاشة البداية */
+.splash-logo {
+  max-width: 200px;              /* حجم مناسب للشعار */
+  width: 40%;
+  animation: logo-zoom 3s ease-in-out;
+}
+
+/* تكبير الشعار تدريجيًا */
+@keyframes logo-zoom {
+  0%   { transform: scale(0.5); opacity: 0; }
+  50%  { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1);   opacity: 1; }
+}
+
+/* تلاشي شاشة البداية بعد انتهاء العد */
+@keyframes splash-fade-out {
+  to { opacity: 0; visibility: hidden; }
+}
+
+/* الخطوط والخلفية */
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #f8f9fa;
+  }
+
+  
+  /* شريط التنقل */
+  .navbar {
+    background-color: #003366;
+  }
+  .navbar .nav-link,
+  .navbar-brand,
+  .lang-btn {
+    color: #B4A87D;
+  }
+  .navbar .nav-link:hover,
+  .lang-btn:hover {
+    color: #B4A87D;
+  }
+  .yes-logo {
+    height: 50px;
+  }
+  
+  /* أزرار اللغة */
+  .lang-btn {
+    border: 1px solid #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+  }
+  .lang-btn.active {
+    background-color: #B4A87D;
+    color: #003366;
+  }
+  
+  /* القسم التمهيدي (Hero) */
+  .hero {
+    background: url('hero-image.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  /* بطاقات العقارات */
+  .property-card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* التذييل */
+  .footer {
+    background-color: #003366;
+    color: #bbb;
+    padding: 20px 0;
+  }
+  .footer a {
+    color: #B4A87D;
+    text-decoration: none;
+  }
+
+  .hero {
+    position: relative;              /* احتواء أي عناصر مطلية */
+    min-height: 90vh;                /* ارتفاع مناسب للواجهة */
+    display: flex;                   /* لتوسيط المحتوى عمودياً */
+    align-items: center;
+    justify-content: center;         /* لتوسيط المحتوى أفقياً */
+    
+    /* الصورة كخلفية كاملة للواجهة */
+    background-image: url('images/ASMA.JPG');
+    background-size: cover;          /* تغطي كامل المساحة */
+    background-position: center;     /* تموضع مركزي */
+    background-repeat: no-repeat;
+    
+    color: #fff;                     /* نص أبيض فوق الصورة */
+    text-align: center;
+    padding: 2rem 1rem;              /* حشوة حول المحتوى */
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);  /* طبقة سوداء شفافة */
+    z-index: 0;
+  }
+  .hero > .container {
+    position: relative;
+    z-index: 1;  /* فوق طبقة التظليل */
+  }
+
+  /* صندوق تواصل معنا المبسط */
+.contact-box {
+  max-width: 400px;                   /* أقصى عرض للصندوق */
+  background: rgba(255,255,255,0.9); /* خلفية فاتحة شبه شفافة */
+  border-radius: 8px;                /* زوايا مدورة */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* ظل خفيف */
+  text-align: center;                /* تمركز النص داخل الصندوق */
+}
+.contact-box p {
+  margin: 0.75rem 0;                 /* مسافة رأسية بين الأسطر */
+  font-size: 1.1rem;                 /* تكبير بسيط للنص */
+  color: #333;                       /* لون النص */
+}
+.contact-box a {
+  color: #003366;                    /* لون الرابط */
+  text-decoration: none;             /* إزالة التسطير */
+}
+
+.contact-box a:hover {
+  text-decoration: underline;        /* تظليل عند المرور */
+}
+.custom-browse-btn {
+  background-color: #B4A87D;   /* لون داكن */
+  color: #003366;                 /* نص أبيض */
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-browse-btn:hover {
+  background-color: #003366;  /* لون عند التمرير */
+  color: #B4A87D;   
+}
+
+.property-images img {
+  object-fit: cover;
+  height: 200px;
+}
+
+.property-specs .list-group-item {
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .property-images img {
+    height: 300px;
+  }
+}
+/* أيقونة العملة بجانب السعر */
+.currency-icon {
+  width: 2em;                      /* بحجم خط النص */
+  vertical-align: middle;          /* تطابق المحاذاة مع الرقم */
+  margin-inline-start: 0.1em;     /* مسافة بين الرقم والصورة (يتوافق مع RTL/LTR) */
+}

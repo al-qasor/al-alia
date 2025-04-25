@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="title">شركة القصور العالية</title>
+  <!-- خط عربي -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 RTL -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <!-- ملف CSS خارجي -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <body>
+    <!-- شاشة البداية -->
+    <div id="splash">
+      <img src="images/logo.PNG" alt="شعار الموقع" class="splash-logo">
+    </div>
+  
+ 
+  <!-- شريط التنقل -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <img src="images/logo.PNG" alt="شعار الموقع" class="yes-logo">
+      <a class="navbar-brand" href="#" data-i18n="brand">شركة القصور العالية</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false"
+              aria-label="تبديل التنقل">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#home" data-i18n="home">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about" data-i18n="about">من نحن</a></li>
+          <li class="nav-item"><a class="nav-link" href="#properties" data-i18n="properties">العقارات</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="contact">تواصل معنا</a></li>
+          <li class="nav-item">
+            <span id="btn-ar" class="lang-btn active">العربية</span>
+            <span id="btn-en" class="lang-btn">EN</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- قسم الواجهة (Hero) -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1 class="display-4" data-i18n="hero_title">
+        مرحباً بكم في شركة القصور العالية
+      </h1>
+      <p class="lead" data-i18n="hero_subtitle">
+        نقدم أفضل الخدمات العقارية لعملائنا بكل احترافية وثقة
+      </p>
+      <a href="#properties" class="btn btn-lg custom-browse-btn" data-i18n="browse">
+        تصفح العقارات
+      </a>
+    </div>
+  </section>
+
+  <!-- من نحن (المؤسسين) -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center" data-i18n="about_title">من نحن</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+          <div class="card border-0">
+            <div class="card-body">
+              <h5 class="card-title" data-i18n="founder_title">المؤسس</h5>
+              <p class="card-text display-6" data-i18n="founder_name">
+                سلطان سعد ال دعكن
+              </p>
+              <p data-i18n="founder_desc">خبرة طويلة في مجال العقارات وتقديم أفضل الحلول لعملائنا.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- العقارات المميزة -->
+  <section id="properties" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4 text-center" data-i18n="props_title">عقاراتنا المميزة</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card property-card">
+            <img src="images/property.jpg" class="card-img-top" alt="عقار 1">
+            <div class="card-body">
+              <h5 class="card-title" data-i18n="villa_title">شقة فاخرة</h5>
+              <p class="card-text" data-i18n="villa_desc">في قلب الخبر حيث اجتمع جمال التصميم مع جمال الموقع</p>
+              <a href="property.html" class="btn btn-outline-primary" data-i18n="more">المزيد</a>
+            </div>
+          </div>
+        </div>
+        <!-- يمكن تكرار البطاقات مع نفس data-i18n للعناصر -->
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="section-heading mb-4 text-center" data-i18n="contact_title">
+        تواصل معنا
+      </h2>
+      <div class="contact-box mx-auto p-4 bg-light rounded shadow">
+        <p><strong data-i18n="contact_email"></strong>
+          <a href="mailto:your-email@example.com">your-email@example.com</a>
+        </p>
+        <p><strong data-i18n="contact_phone"></strong>
+          <a href="tel:+9660571934424">+966 0571934424</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- تذييل الصفحة -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p data-i18n="footer_copy">© 2025 شركة القصور العالية. جميع الحقوق محفوظة.</p>
+      <p>
+        <a href="#" data-i18n="privacy">سياسة الخصوصية</a> |
+        <a href="#" data-i18n="terms">شروط الاستخدام</a>
+      </p>
+    </div>
+  </footer>
+     <!-- المحتوى الرئيسي مخفي مؤقتًا -->
+     <div id="main-content" style="display: none;">
+      <!-- هنا يأتي كل كود الـ navbar والـ sections… -->
+      <nav class="navbar navbar-expand-lg">
+        …
+      </nav>
+      <section id="home" class="hero"> … </section>
+      …
+    </div>
+
+  
+    <!-- رابط الجافاسكربت خارجي -->
+    <script src="script.js"></script>
+  </body>
+</body>
+</html>
